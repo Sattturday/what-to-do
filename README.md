@@ -1,3 +1,5 @@
+[eng](https://github.com/Sattturday/what-to-do/blob/main/README.md) / [ru](https://github.com/Sattturday/what-to-do/blob/main/README_ru.md)<br>
+
 ## 🧩 What to do?
 
 This service helps you find things to do when you're bored!
