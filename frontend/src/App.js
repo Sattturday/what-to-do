@@ -53,16 +53,24 @@ function App() {
         <p className='page__description'>Data is updated 2 times per minute</p>
       </div>
       {data && (
-        <div className='activity'>
-          <h2 className='activity__title'>
+        <ul className='activity'>
+          <li className='activity__item'>
             <span>Activity: </span>
             {data.activity}
-          </h2>
-          <p className='activity__subtitle'>
+          </li>
+          <li className='activity__item'>
             <span>Type: </span>
             {data.type}
-          </p>
-        </div>
+          </li>
+          <li className='activity__item'>
+            <span>Participants: </span>
+            {data.participants}
+          </li>
+          <li className='activity__item'>
+            <span>Time: </span>
+            {data.time}
+          </li>
+        </ul>
       )}
     </div>
   );

@@ -68,22 +68,23 @@
 }
 
 .activity {
+  margin: 0;
+  padding: 0;
   width: 40%;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.activity__title,
-.activity__subtitle {
+.activity__item {
   margin: 0;
   font-size: 28px;
   font-weight: 400;
   line-height: normal;
 }
 
-.activity__title span,
-.activity__subtitle span {
+.activity__item span {
   font-weight: 700;
 }
 
@@ -143,8 +144,7 @@
     gap: 10px;
   }
 
-  .activity__title,
-  .activity__subtitle {
+  .activity__item {
     font-size: 18px;
   }
 }

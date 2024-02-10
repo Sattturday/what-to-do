@@ -1,23 +1,23 @@
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./fonts/raleway_regular.eot'),
-    url('./fonts/raleway_regular.eot?#iefix') format('embedded-opentype'),
-    url('./fonts/raleway_regular.woff2') format('woff2'),
-    url('./fonts/raleway_regular.woff') format('woff'),
-    url('./fonts/raleway_regular.ttf') format('truetype');
+  src: url('./fonts/roboto_regular.eot'),
+    url('./fonts/roboto_regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/roboto_regular.woff2') format('woff2'),
+    url('./fonts/roboto_regular.woff') format('woff'),
+    url('./fonts/roboto_regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('./fonts/raleway_bold.eot'),
-    url('./fonts/raleway_bold.eot?#iefix') format('embedded-opentype'),
-    url('./fonts/raleway_bold.woff2') format('woff2'),
-    url('./fonts/raleway_bold.woff') format('woff'),
-    url('./fonts/raleway_bold.ttf') format('truetype');
+  src: url('./fonts/roboto_bold.eot'),
+    url('./fonts/roboto_bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/roboto_bold.woff2') format('woff2'),
+    url('./fonts/roboto_bold.woff') format('woff'),
+    url('./fonts/roboto_bold.ttf') format('truetype');
 }
