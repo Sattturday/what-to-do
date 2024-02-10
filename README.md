@@ -19,7 +19,13 @@ git clone https://github.com/Sattturday/what-to-do
 
 **_Backend_**
 
-Navigate to the backend directory and install NPM packages
+Navigate to the backend directory
+
+```
+cd backend
+```
+
+Install NPM packages
 
 ```
 npm install
@@ -33,7 +39,13 @@ npm run dev
 
 **_Frontend_**
 
-Navigate to the frontend directory and install NPM packages
+Navigate to the frontend directory
+
+```
+cd frontend
+```
+
+Install NPM packages
 
 ```
 npm install
