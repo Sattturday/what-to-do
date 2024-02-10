@@ -1,4 +1,4 @@
-[ru](mailto:babara@flylady.su) / [eng](https://github.com/Sattturday/what-to-do/blob/main/README.md)<br>
+[eng](https://github.com/Sattturday/what-to-do/blob/main/README.md) / [ru](https://github.com/Sattturday/what-to-do/blob/main/README_ru.md)<br>
 
 ## 🧩 Что делать?
 
