@@ -7,7 +7,7 @@ This service helps you find things to do when you're bored!
 1. backend/ - backend for the server with API
 2. frontend/ - frontend on React.js
 
-## Installation and Running
+### ✨ Installation and Running
 
 To run the project in your development environment, follow these instructions:
 
