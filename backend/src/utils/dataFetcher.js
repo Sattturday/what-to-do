@@ -17,7 +17,7 @@ function getGlobalData() {
   return globalData;
 }
 
-// Вызов функции fetchData раз в 1 минуты
-setInterval(fetchData, 60000);
+// Вызов функции fetchData 2 раза в минуту
+setInterval(fetchData, 30000);
 
 module.exports = { fetchData, getGlobalData };
