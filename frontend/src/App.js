@@ -20,10 +20,10 @@ function App() {
     <div className='page'>
       <div class='page__container'>
         <h1 className='page__title'>Are you bored?</h1>
+        <img className='page__img' src={img} alt='question' />
         <button className='page__button' onClick={fetchData}>
           Ask!
         </button>
-        <img className='page__img' src={img} alt='question' />
         <p className='page__description'>Data is updated once per minute</p>
       </div>
       {data && (

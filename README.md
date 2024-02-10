@@ -2,6 +2,8 @@
 
 This service helps you find things to do when you're bored!
 
+<img src="https://github.com/Sattturday/Sattturday/blob/main/what-to-do.jpg" alt="demo" width="600">
+
 ### 🏚️ Project structure
 
 1. backend/ - backend for the server with API
