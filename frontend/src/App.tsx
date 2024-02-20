@@ -20,42 +20,53 @@ const App: React.FC = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false); // Флаг для активации/деактивации кнопки
   const [secondsRemaining, setSecondsRemaining] = useState<number>(0); // Счетчик времени
 
-  // Функция для получения данных
-  const fetchData = async () => {
-
+ async function fetchData(): Promise<boolean> {
+  let response: Response;
     
+  try {
+    response = await fetch("http://localhost:5000/api/v1/data");
+  } catch (e) {
+    console.error(
+      "679a7a31-a891-4e77-97fd-e0d3fb075c83 Error fetching data:",
+      e
+    );
+    return false;
+  }
+
     try {
-      const response = await fetch('http://localhost:5000/api/v1/data');
-      if (!response.ok) {
-        throw new Error('e5e589ec-b2c8-4f4b-a6b0-5878fd951833 Failed to fetch data');
-      }
       const jsonData: unknown = await response.json();
 
-        if (
-          typeof jsonData === 'object' &&
-          jsonData !== null &&
-          hasOwnPropertyFromUnknown(jsonData, 'activity') &&
-          typeof jsonData.activity === 'string' &&
-          hasOwnPropertyFromUnknown(jsonData, 'type') &&
-          typeof jsonData.type === 'string' &&
-          hasOwnPropertyFromUnknown(jsonData, 'participants') &&
-          typeof jsonData.participants === 'number' &&
-          hasOwnPropertyFromUnknown(jsonData, 'time') &&
-          typeof jsonData.time === 'string'
-        ) {
-          setData({
-            activity: jsonData.activity,
-            type: jsonData.type,
-            participants: jsonData.participants,
-            time: jsonData.time
-          });
-          setIsButtonDisabled(true); // Делаем кнопку неактивной
-          setSecondsRemaining(30); // Устанавливаем счетчик обратного отсчета на 30 секунд
-        }
-  } catch (error) {
-      console.error('Error fetching data:', (error as Error).message);
+      if (
+        typeof jsonData === 'object' &&
+        jsonData !== null &&
+        hasOwnPropertyFromUnknown(jsonData, 'activity') &&
+        typeof jsonData.activity === 'string' &&
+        hasOwnPropertyFromUnknown(jsonData, 'type') &&
+        typeof jsonData.type === 'string' &&
+        hasOwnPropertyFromUnknown(jsonData, 'participants') &&
+        typeof jsonData.participants === 'number' &&
+        hasOwnPropertyFromUnknown(jsonData, 'time') &&
+        typeof jsonData.time === 'string'
+      ) {
+        setData({
+          activity: jsonData.activity,
+          type: jsonData.type,
+          participants: jsonData.participants,
+          time: jsonData.time
+        });
+        setIsButtonDisabled(true); // Делаем кнопку неактивной
+        setSecondsRemaining(30); // Устанавливаем счетчик обратного отсчета на 30 секунд
+        return true;
+      } else {
+        return false;
+      }
+    } catch (error) {
+      console.error('aff46288-ff0d-46d1-bec0-cf57b12d9b7c Error fetching data:', 
+      error
+      );
+      return false;
     }
-  };
+  }
 
   // Эффект для обратного отсчета времени
   useEffect(() => {

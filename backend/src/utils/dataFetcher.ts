@@ -61,6 +61,7 @@ async function fetchData(): Promise<boolean> {
 
   try {
     const jsonData: unknown = await response.json();
+
     if (
       typeof jsonData === "object" &&
       jsonData !== null &&
@@ -95,7 +96,6 @@ async function fetchData(): Promise<boolean> {
     );
     return false;
   }
-  // let jsonData: unknown
 }
 
 function getGlobalData(): typeof globalData {
