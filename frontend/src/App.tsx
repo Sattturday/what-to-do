@@ -33,6 +33,7 @@ const App: React.FC = () => {
     return false;
   }
 
+  let activity: ActivityData;
     try {
       const jsonData: unknown = await response.json();
 
@@ -48,15 +49,13 @@ const App: React.FC = () => {
         hasOwnPropertyFromUnknown(jsonData, 'time') &&
         typeof jsonData.time === 'string'
       ) {
-        setData({
+        activity = {
           activity: jsonData.activity,
           type: jsonData.type,
           participants: jsonData.participants,
           time: jsonData.time
-        });
-        setIsButtonDisabled(true); // Делаем кнопку неактивной
-        setSecondsRemaining(30); // Устанавливаем счетчик обратного отсчета на 30 секунд
-        return true;
+        };
+        
       } else {
         return false;
       }
@@ -66,6 +65,12 @@ const App: React.FC = () => {
       );
       return false;
     }
+    
+    setData(activity);
+    setIsButtonDisabled(true); // Делаем кнопку неактивной
+    setSecondsRemaining(30); // Устанавливаем счетчик обратного отсчета на 30 секунд
+    
+    return true;
   }
 
   // Эффект для обратного отсчета времени
